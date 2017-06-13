@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project basedir="." default="all" name="mycentos">
+	<target name="all" depends="run"/>
+
+	<target name="run" depends="build">
+		<exec dir="." executable="docker">
+			<arg line="run -it mycentos:7 zsh"/>
+		</exec>
+	</target>
+
+	<target name="build">
+		<exec dir="." executable="docker">
+			<arg line="build -t mycentos:7 ."/>
+		</exec>
+	</target>
+
+	<target name="clean">
+		<exec dir="." executable="docker">
+			<arg line="rm -f mycentos:7"/>
+		</exec>
+	</target>
+</project>
