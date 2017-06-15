@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 RUN yum clean all && \
     yum update -y && \
     yum install -y epel-release && \

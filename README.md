@@ -1,3 +1,3 @@
-docker build -t mycentos:7 .
+docker build -t mycentos:latest .
 
-docker run -it mycentos:7 zsh
+docker run -it mycentos:latest zsh
